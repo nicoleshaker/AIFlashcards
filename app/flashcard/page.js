@@ -1,3 +1,14 @@
+import { useUser } from '@clerk/nextjs' 
+import {
+    Container,
+    CardActionArea,
+    CardContent,
+    Typography,
+    Box,
+    Grid,
+    Card,
+  } from '@mui/material'
+
 export default function Flashcard() {
     const { isLoaded, isSignedIn, user } = useUser()
     const [flashcards, setFlashcards] = useState([])
@@ -6,12 +17,16 @@ export default function Flashcard() {
     const searchParams = useSearchParams()
     const search = searchParams.get('id')
 
-    const handleCardClick = (id) => {
+   /* const handleCardClick = (id) => {
         setFlipped((prev) => ({
           ...prev,
           [id]: !prev[id],
         }))
-      }
+      }*/
+
+    const handleCardClick = (id) => {
+            router.push(`/flashcard?id=${id}`)
+          }
   
     useEffect(() => {
         async function getFlashcard() {

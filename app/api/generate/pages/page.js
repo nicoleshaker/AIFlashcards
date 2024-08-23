@@ -1,5 +1,7 @@
 'use client'
 
+
+import Dialog from '@mui/material/Dialog'
 import { useState } from 'react'
 import {
   Container,
@@ -7,6 +9,13 @@ import {
   Button,
   Typography,
   Box,
+  CardContent,
+  Grid,
+  Card,
+  DialogTitle,
+  DialogContent, 
+  DialogContentText,
+  DialogActions
 } from '@mui/material'
 
 export default function Generate() {

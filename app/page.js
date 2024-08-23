@@ -1,5 +1,8 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.css"
+import { 
+  SignedOut, SignedIn, Box, UserButton, Grid, Typography, AppBar, Toolbar, Button } from '@mui/material'
+
 
 export default function Home() {
   const handleSubmit = async () => {
